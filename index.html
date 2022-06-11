@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>cruds system</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="cruds system">
+
+        <link rel="stylesheet" media="all" type="text/css" href="style.css"><!--external css-->
+        <link rel="icon" href="media/crud.png">
+        <link rel="stylesheet" href="normalize.css">
+
+        <script type="text/javascript" src="html5shiv.min.js"></script>
+        <script type="text/javascript" src="main.js" defer></script><!--external js-->
+
+        <style type="text/css"></style>
+    </head>
+    <body>
+
+
+        <!--the general class of all thing-->
+        <div class="cruds">
+
+
+            <div class="header">
+              <!--the div of header-->   
+              <h2>cruds</h2>      
+               <p>PRODUCT MANAGEMENT SYSTEM</p>
+
+            </div>
+
+
+            <div class="inputs"><!--main-->
+                <input title="@Ahmed title" type="text" id="title" placeholder="title">
+                <br><br>
+                <div class="price">
+                    <input title="@Ahmed price" onkeyup="gettotal()" type="number" id="price" placeholder="price" >
+                    <input  title="@Ahmed taxes" onkeyup="gettotal()" type="number" id="taxes" placeholder="taxes">
+                    <input title="@Ahmed ads"  onkeyup="gettotal()" type="number" id="ads" placeholder="ads">
+                    <input title="@Ahmed discount" onkeyup="gettotal()" type="number" id="discount" placeholder="discount" >
+                    <output title=" @Ahmed title" id="total"></output>
+                </div>
+                <br>
+                <input type="number" id="count" placeholder="count">
+                <input type="text" placeholder="category" id="category">
+                <button id="submit">Create</button>
+            </div>
+
+
+<br>
+<hr><hr>
+<br>
+
+
+<div class="outputs">
+    <!--footer-->
+    <div class="searchblock">
+        <input type="text"   onkeyup="searchofdata(this.value)"  placeholder="Search" id="searchbar" title="@Ahmed search bar ">
+        <div class="btnsearch">
+            
+            <button id="searchtitle" title="@Ahmed search"  onclick="getsearchmood(this.id)">Search By Title</button>
+            <button id="searchcategory" title="@Ahmed search" onclick="getsearchmood(this.id)">Search By Category</button>
+            
+        </div>
+    </div>
+    <!--table-->
+    <table>
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+        </tr>
+
+        <tbody id="tbody">
+          
+        </tbody>
+    </table>
+</div>
+
+
+        </div>
+<!-- last video in course    -->
+<!-- dont forget to add or push new last version to github -->
+    </body>
+</html>
