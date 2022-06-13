@@ -3,10 +3,28 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     //start from here 
 
-
-
+/*
+**
+***********************
+**************************************
+******************************
+*******************
+*/
 
 
 
@@ -94,7 +112,7 @@
 
 
 
-    //1)function of get total
+    //1)function of gettotal()
 
     function gettotal(){
         
@@ -108,7 +126,7 @@
             
             total.innerHTML=' '+ result;
             total.style.background="green";
-            total.style.margin=" 0 8px ";
+            total.style.margin=" 0 8px ";   
             
         }
         else{
@@ -138,6 +156,7 @@
     if(localStorage.products != null)
     {
         productsdata=JSON.parse(localStorage.products)
+        //from local storage to array so u have to change data from string to obj
     }
     else{
         productsdata=[];
@@ -237,8 +256,9 @@
 
     
     else{
-        productsdata[temp]=productsdataobject;
-        mood='create';
+
+        productsdata[temp]=productsdataobject;//here u will put the obj in array if the mood = update;
+        mood='create';// then make mood="create";
         submit.innerHTML="create";
         count.style.display="block";
 
@@ -332,6 +352,7 @@
 
 
     tbody.innerHTML+=tabledata;
+   
 
 
 
@@ -390,7 +411,7 @@
     deleteallbtn.innerHTML="DeleteAll";
     deleteallbtn.style.cssText=` 
     width:100%;
-    height: 30px;
+    height: 33px;
     position:relative;
     border: none;
     border-radius: 20px;
@@ -399,6 +420,7 @@
     background: rgb(73, 4, 73);
     text-transform: capitalize;
     left:-30px;
+    margin-top:20px;
     `;
 
 
